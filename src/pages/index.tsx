@@ -41,7 +41,7 @@ export default function HomePage() {
             <img src="https://i.ibb.co/yFPd4sZy/case.png" alt="Case Catedral Transportadora" className="rounded-xl shadow mb-4 w-full" />
             <p className="text-lg font-semibold text-gray-800">🚛 Case: Catedral Transportadora</p>
             <p className="text-gray-700 mt-2">
-              "Com o agente da Neura Studio, conseguimos gerar artes e textos com agilidade, economizando tempo no dia a dia. Ele virou um apoio estratégico para manter nossa comunicação visual padronizada, mesmo com a correria da operação."
+            &quot;Com o agente da Neura Studio, conseguimos gerar artes e textos com agilidade, economizando tempo no dia a dia. Ele virou um apoio estratégico para manter nossa comunicação visual padronizada, mesmo com a correria da operação.&quot;
               <br />
               <span className="font-semibold block mt-2">— Marcelo Rodrigues, CEO da Catedral Transportadora</span>
             </p>
@@ -51,7 +51,7 @@ export default function HomePage() {
             <img src="https://i.ibb.co/60wqG6Bk/case-2.png" alt="Case Cléo Cabeleireiros" className="rounded-xl shadow mb-4 w-full" />
             <p className="text-lg font-semibold text-gray-800">💇‍♀️ Case: Cléo Cabeleireiros</p>
             <p className="text-gray-700 mt-2">
-              "Ter um agente de IA com o estilo da Cléo agilizou nossa rotina e manteve o padrão visual impecável. As sugestões de arte e texto parecem feitas por alguém que já conhece o salão há anos."
+            &quot;Ter um agente de IA com o estilo da Cléo agilizou nossa rotina e manteve o padrão visual impecável. As sugestões de arte e texto parecem feitas por alguém que já conhece o salão há anos.&quot;
               <br />
               <span className="font-semibold block mt-2">— Cleonice C., CEO da Cléo Cabeleireiros</span>
             </p>
