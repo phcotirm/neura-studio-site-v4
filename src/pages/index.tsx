@@ -37,21 +37,23 @@ export default function HomePage() {
             Marcas de diferentes segmentos já estão usando seus agentes de IA para gerar conteúdo com agilidade, consistência e identidade visual. Veja alguns exemplos reais:
           </p>
 
+          {/* --- CORREÇÃO APLICADA AQUI --- */}
           <div className="mt-12 max-w-3xl mx-auto p-6 border border-gray-200 rounded-xl bg-white shadow-lg">
             <img src="https://i.ibb.co/yFPd4sZy/case.png" alt="Case Catedral Transportadora" className="rounded-xl shadow mb-4 w-full" />
             <p className="text-lg font-semibold text-gray-800">🚛 Case: Catedral Transportadora</p>
             <p className="text-gray-700 mt-2">
-            &quot;Com o agente da Neura Studio, conseguimos gerar artes e textos com agilidade, economizando tempo no dia a dia. Ele virou um apoio estratégico para manter nossa comunicação visual padronizada, mesmo com a correria da operação.&quot;
+              &quot;Com o agente da Neura Studio, conseguimos gerar artes e textos com agilidade, economizando tempo no dia a dia. Ele virou um apoio estratégico para manter nossa comunicação visual padronizada, mesmo com a correria da operação.&quot;
               <br />
               <span className="font-semibold block mt-2">— Marcelo Rodrigues, CEO da Catedral Transportadora</span>
             </p>
           </div>
 
+          {/* --- CORREÇÃO APLICADA AQUI --- */}
           <div className="mt-12 max-w-3xl mx-auto p-6 border border-gray-200 rounded-xl bg-white shadow-lg">
             <img src="https://i.ibb.co/60wqG6Bk/case-2.png" alt="Case Cléo Cabeleireiros" className="rounded-xl shadow mb-4 w-full" />
             <p className="text-lg font-semibold text-gray-800">💇‍♀️ Case: Cléo Cabeleireiros</p>
             <p className="text-gray-700 mt-2">
-            &quot;Ter um agente de IA com o estilo da Cléo agilizou nossa rotina e manteve o padrão visual impecável. As sugestões de arte e texto parecem feitas por alguém que já conhece o salão há anos.&quot;
+              &quot;Ter um agente de IA com o estilo da Cléo agilizou nossa rotina e manteve o padrão visual impecável. As sugestões de arte e texto parecem feitas por alguém que já conhece o salão há anos.&quot;
               <br />
               <span className="font-semibold block mt-2">— Cleonice C., CEO da Cléo Cabeleireiros</span>
             </p>
@@ -115,12 +117,16 @@ export default function HomePage() {
         <section id="contact" className="py-20 px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">Pronto pra ter conteúdo alinhado com sua marca todos os dias?</h2>
           <p className="text-lg mb-8">Preencha o formulário e vamos criar seu agente personalizado.</p>
+          {/* Atenção: Campos do formulário precisam do atributo 'name' para funcionar com FormSubmit */}
           <form className="max-w-lg mx-auto grid gap-4 text-left" action="https://formsubmit.co/pedro.henrique.cotrim@hotmail.com" method="POST">
-            <input type="text" placeholder="Nome" className="border p-3 rounded-md w-full" />
-            <input type="email" placeholder="E-mail" className="border p-3 rounded-md w-full" />
-            <input type="text" placeholder="Nome da empresa" className="border p-3 rounded-md w-full" />
-            <input type="text" placeholder="Qual rede social você mais usa?" className="border p-3 rounded-md w-full" />
-            <textarea placeholder="Que tipo de conteúdo você gostaria que seu agente criasse?" className="border p-3 rounded-md w-full" rows="4"></textarea>
+            <input type="text" name="nome" placeholder="Nome" className="border p-3 rounded-md w-full" required />
+            <input type="email" name="email" placeholder="E-mail" className="border p-3 rounded-md w-full" required />
+            <input type="text" name="empresa" placeholder="Nome da empresa" className="border p-3 rounded-md w-full" />
+            <input type="text" name="rede_social" placeholder="Qual rede social você mais usa?" className="border p-3 rounded-md w-full" />
+            <textarea name="tipo_conteudo" placeholder="Que tipo de conteúdo você gostaria que seu agente criasse?" className="border p-3 rounded-md w-full" rows="4"></textarea>
+            {/* Campos ocultos para FormSubmit (opcional, mas bom para evitar spam e configurar redirecionamento) */}
+            <input type="hidden" name="_captcha" value="false" />
+            {/* <input type="hidden" name="_next" value="https://sua-pagina-de-obrigado.com" /> */}
             <button type="submit" className="bg-blue-600 text-white py-3 rounded-md font-semibold hover:bg-blue-700">
               Criar meu agente de IA
             </button>
@@ -144,14 +150,16 @@ export default function HomePage() {
             Menos tempo com briefing, mais tempo com resultado.
           </p>
           <p className="mt-4 text-xs">Instagram | LinkedIn | WhatsApp</p>
+          {/* Corrigido para exibir o ano atual dinamicamente */}
           <p className="mt-2 text-xs">© {new Date().getFullYear()} Neura Studio. Todos os direitos reservados. Termos de Uso</p>
         </footer>
+
       <a href="https://wa.me/5561999167627?text=Ol%C3%A1,%20gostaria%20de%20entender%20melhor%20sobre%20o%20agente%20designer." target="_blank" rel="noopener noreferrer" className="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
-    <path d="M12.001 2.001c-5.514 0-9.999 4.484-9.999 9.999a9.935 9.935 0 0 0 1.389 5.094L2 22l4.979-1.309a9.96 9.96 0 0 0 5.021 1.309c5.515 0 10-4.485 10-10 0-5.515-4.485-10-10-10zm.103 17.954c-1.38 0-2.722-.369-3.902-1.068l-.28-.165-2.956.777.79-2.882-.183-.296a7.926 7.926 0 0 1-1.228-4.272c0-4.407 3.588-7.994 7.993-7.994 4.405 0 7.993 3.587 7.993 7.994 0 4.405-3.588 7.994-7.993 7.994zm4.246-5.914c-.231-.116-1.365-.675-1.578-.752-.212-.078-.367-.116-.522.116s-.6.752-.736.905c-.135.153-.27.173-.5.058-.231-.115-.975-.359-1.857-1.144-.686-.612-1.147-1.367-1.281-1.598-.135-.23-.015-.354.101-.47.104-.104.231-.27.347-.405.116-.135.154-.231.231-.385.077-.154.038-.289-.02-.405-.058-.116-.522-1.261-.715-1.729-.188-.452-.38-.39-.522-.398l-.444-.008c-.135 0-.353.05-.538.23s-.706.69-.706 1.68 1.095 1.953 1.247 2.089c.153.135 2.16 3.303 5.238 4.63.732.316 1.302.504 1.745.644.732.233 1.398.2 1.924.122.587-.086 1.365-.557 1.56-1.095.192-.538.192-.999.135-1.095-.058-.096-.211-.153-.444-.27z"/>
-  </svg>
-</a>
-</main>
-    </div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-6 h-6">
+          <path d="M12.001 2.001c-5.514 0-9.999 4.484-9.999 9.999a9.935 9.935 0 0 0 1.389 5.094L2 22l4.979-1.309a9.96 9.96 0 0 0 5.021 1.309c5.515 0 10-4.485 10-10 0-5.515-4.485-10-10-10zm.103 17.954c-1.38 0-2.722-.369-3.902-1.068l-.28-.165-2.956.777.79-2.882-.183-.296a7.926 7.926 0 0 1-1.228-4.272c0-4.407 3.588-7.994 7.993-7.994 4.405 0 7.993 3.587 7.993 7.994 0 4.405-3.588 7.994-7.993 7.994zm4.246-5.914c-.231-.116-1.365-.675-1.578-.752-.212-.078-.367-.116-.522.116s-.6.752-.736.905c-.135.153-.27.173-.5.058-.231-.115-.975-.359-1.857-1.144-.686-.612-1.147-1.367-1.281-1.598-.135-.23-.015-.354.101-.47.104-.104.231-.27.347-.405.116-.135.154-.231.231-.385.077-.154.038-.289-.02-.405-.058-.116-.522-1.261-.715-1.729-.188-.452-.38-.39-.522-.398l-.444-.008c-.135 0-.353.05-.538.23s-.706.69-.706 1.68 1.095 1.953 1.247 2.089c.153.135 2.16 3.303 5.238 4.63.732.316 1.302.504 1.745.644.732.233 1.398.2 1.924.122.587-.086 1.365-.557 1.56-1.095.192-.538.192-.999.135-1.095-.058-.096-.211-.153-.444-.27z"/>
+        </svg>
+      </a>
+    </main>
+  </div>
   );
 }
